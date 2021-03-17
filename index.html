@@ -9,18 +9,38 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./assests/style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>THE Weather Dashboard</title>
   </head>
 
   <body>
-    <h1>Hello World!</h1>
-  </body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="./assests/script.js"></script>
+    <header class="container-fluid text-center p-2">
+      <h1>THE Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+
+      <div class="row">
+        <aside class="col-lg-3">
+          <h3 class="mt-1">Search for a City:</h3>
+          <div class="form-group">
+            <input class="form-control" id="input-value" type="text"/>
+            <button class="btn btn-primary" id="search-button">Click me</button>
+          </div>
+          <ul class="list-group history" id="history"></ul>
+        </aside>
+        <div class="col-lg-9">
+          <div id="current-day" class="mt-3"></div>
+          <div id="forecast" class="row mt-3"></div>
+        </div>
+      </div>
+
+    </main>
+    
+    <script src="assets/script.js"></script>
+  </body>
 </html>
