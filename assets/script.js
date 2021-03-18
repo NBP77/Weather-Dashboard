@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
 
 
     function searchWeather(inputValue) {
-      var endpoint = `http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=imperial`;
+      var endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=imperial`;
       fetch(endpoint)
         .then((res) => res.json())
         .then((data) => {
