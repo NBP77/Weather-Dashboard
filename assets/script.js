@@ -46,18 +46,29 @@ window.addEventListener('load', function () {
           humidEl.textContent = `Humidity: ${data.main.humidity} %`;
           tempEl.textContent = `Temperature: ${data.main.temp} °F`;
           var cardBody = document.createElement('div');
-          cardBody.classList.add('card-body');
-                             
+          cardBody.classList.add('card-body');       
           cardBody.appendChild(titleEl);
           cardBody.appendChild(tempEl);
           cardBody.appendChild(humidEl);
           cardBody.appendChild(windEl);
           cardEl.appendChild(cardBody);
           todayEl.appendChild(cardEl);
-    
-        
         });
+
+        var endpoint = `http://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}&units=imperial`;
+      fetch(endpoint)
+      .then((res) => res.json())
+      .then((data) => {
+  
+        var fiveDayForecastEl = document.querySelector('#forecast');
+        fiveDayForecastEl.innerHTML = '<h3 class="mt-3 align-items-center bg-transparent text-success">Five-Day Forecast:</h3>';
+        fiveDayForecastRowEl = document.createElement('div');
+        fiveDayForecastRowEl.className = '"row"';
+        
+      }); 
     }
+   
+    
    
     function makeRow(inputValue) {
     
@@ -79,6 +90,9 @@ window.addEventListener('load', function () {
       existingHistory.forEach((item) => makeRow(item));
     }
    
+
+    
+
    
   });
 
