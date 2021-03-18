@@ -32,11 +32,27 @@ window.addEventListener('load', function () {
             handleHistory(inputValue);
           }
       
-          todayEl = document.querySelector('#current-day');
-          todayEl.textContent = ' ';
+          currentDay = document.querySelector('#current-day');
+          currentDay.textContent = ' ';
                   
-        
-    
+          var title = document.createElement('h4');
+          title.classList.add('card');
+          title.textContent = `${data.name} 
+          (${new Date().toLocaleDateString()})`;
+          var windEl = document.createElement('p');
+          windEl.classList.add('card-text');
+          var humidEl = document.createElement('p');
+          humidEl.classList.add('card-text');
+          var cardEl = document.createElement('div');
+          cardEl.classList.add('card');
+          var tempEl = document.createElement('p');
+          tempEl.classList.add('card-text');
+          humidEl.textContent = `Humidity: ${data.main.humidity} %`;
+          tempEl.textContent = `Temperature: ${data.main.temp} °F`;
+          var cardBody = document.createElement('div');
+          cardBody.classList.add('card-body');
+                             
+         
         
         });
     }
@@ -114,63 +130,6 @@ window.addEventListener('load', function () {
 
 
 
-// console.log("Hello world");
-
-// var apiKey = "b709ac3bd09c4e9ad0bf2e05ce1dcaa6"; 
-
-// window.addEventListener('load', function () {
-
-// var apiInfo = `http://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}&units=imperial`;
-// fetch(apiInfo)
-//     .then((response) => response.json())
-//     console.log(apiInfo)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     function getInputValue() {
-//         var inputValue = document.querySelector('#input-value').value;
-//         if (inputValue) {
-//             getWeather(inputValue);
-//             addRow(inputValue);
-//             document.querySelector('#input-value').value = '';
-//         }
-//     }   
-    
-//     document.querySelector('#input-value').addEventListener('click', getInputValue);
-
-  
-
-
-// })
 
 
 
