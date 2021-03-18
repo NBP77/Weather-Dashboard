@@ -64,8 +64,11 @@ window.addEventListener('load', function () {
         fiveDayForecastRowEl = document.createElement('div');
         fiveDayForecastRowEl.className = '"row"';
         for (var i = 0; i < data.list.length; i++) {
-          // Only look at forecasts around 3:00pm
           if (data.list[i].dt_txt.indexOf('15:00:00') !== -1) {
+            var colEl = document.createElement('div');
+            colEl.classList.add('col-md-3');
+
+
           }
         }
       }); 
