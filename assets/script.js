@@ -59,12 +59,15 @@ window.addEventListener('load', function () {
       fetch(endpoint)
       .then((res) => res.json())
       .then((data) => {
-  
         var fiveDayForecastEl = document.querySelector('#forecast');
         fiveDayForecastEl.innerHTML = '<h3 class="mt-3 align-items-center bg-transparent text-success">Five-Day Forecast:</h3>';
         fiveDayForecastRowEl = document.createElement('div');
         fiveDayForecastRowEl.className = '"row"';
-        
+        for (var i = 0; i < data.list.length; i++) {
+          // Only look at forecasts around 3:00pm
+          if (data.list[i].dt_txt.indexOf('15:00:00') !== -1) {
+          }
+        }
       }); 
     }
    
