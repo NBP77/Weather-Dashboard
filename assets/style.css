@@ -9,3 +9,8 @@
 body { 
     background-color: var(--blue-2) ;
 }
+
+h1{
+    font-size: 70px;
+    background-color: var(--blue-4);
+}

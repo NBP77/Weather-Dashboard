@@ -27,17 +27,14 @@ window.addEventListener('load', function () {
       fetch(endpoint)
         .then((res) => res.json())
         .then((data) => {
-   
-          if (!existingHistory.includes(inputValue)) {
-            handleHistory(inputValue);
-          }
+
       
           todayEl = document.querySelector('#current-day');
           todayEl.textContent = ' ';
                   
           var titleEl = document.createElement('h4');
           titleEl.classList.add('card');
-          titleEl.textContent = `${data.nam} (${new Date().toLocaleDateString()})`;
+          titleEl.textContent = `${data.name} (${new Date().toLocaleDateString()})`;
           var cardEl = document.createElement('div');
           cardEl.classList.add('card');
           var windEl = document.createElement('p');
