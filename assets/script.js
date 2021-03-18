@@ -14,7 +14,12 @@ window.addEventListener('load', function () {
 
       document.querySelector('#search-button').addEventListener('click', getSearchVal);
 
-   
+    var existingHistory;
+    if (!JSON.parse(localStorage.getItem('history'))) {
+      existingHistory = [];
+    } else {
+      existingHistory = JSON.parse(localStorage.getItem('history'));
+    }
    
     function makeRow(inputValue) {
     
