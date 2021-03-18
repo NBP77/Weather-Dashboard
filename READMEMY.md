@@ -5,13 +5,13 @@ A website to find weather reports around the country
 
 -The main goal for this project was to create a website dashboard for users to input a city name and get the current and future reports.
  
--The weather was 
+-The weather data was brought in by a 3rd party API called "Open Weather" 
  
--Moving down to the timeblocks you can see that there are organized by hours in the day. 
+-Was able to get a history tabe about the cities 
 
--The user is able to click into a timeblock and write down notes. 
+-The user is able to get the Temp and humidity.
 
--Currenlty working on the changing of the colors for each timeblock. 
+-Need to work on adding other aspects that are in the acceptance criteria.
 
 ## Installation
 

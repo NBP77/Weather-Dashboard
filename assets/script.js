@@ -20,6 +20,26 @@ window.addEventListener('load', function () {
     } else {
       existingHistory = JSON.parse(localStorage.getItem('history'));
     }
+
+
+    function searchWeather(inputValue) {
+      var endpoint = `http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=imperial`;
+      fetch(endpoint)
+        .then((res) => res.json())
+        .then((data) => {
+   
+          if (!existingHistory.includes(inputValue)) {
+            handleHistory(inputValue);
+          }
+      
+          todayEl = document.querySelector('#current-day');
+          todayEl.textContent = ' ';
+                  
+        
+    
+        
+        });
+    }
    
     function makeRow(inputValue) {
     
