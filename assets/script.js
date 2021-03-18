@@ -32,19 +32,18 @@ window.addEventListener('load', function () {
             handleHistory(inputValue);
           }
       
-          currentDay = document.querySelector('#current-day');
-          currentDay.textContent = ' ';
+          todayEl = document.querySelector('#current-day');
+          todayEl.textContent = ' ';
                   
-          var title = document.createElement('h4');
-          title.classList.add('card');
-          title.textContent = `${data.name} 
-          (${new Date().toLocaleDateString()})`;
+          var titleEl = document.createElement('h4');
+          titleEl.classList.add('card');
+          titleEl.textContent = `${data.nam} (${new Date().toLocaleDateString()})`;
+          var cardEl = document.createElement('div');
+          cardEl.classList.add('card');
           var windEl = document.createElement('p');
           windEl.classList.add('card-text');
           var humidEl = document.createElement('p');
           humidEl.classList.add('card-text');
-          var cardEl = document.createElement('div');
-          cardEl.classList.add('card');
           var tempEl = document.createElement('p');
           tempEl.classList.add('card-text');
           humidEl.textContent = `Humidity: ${data.main.humidity} %`;
@@ -52,12 +51,12 @@ window.addEventListener('load', function () {
           var cardBody = document.createElement('div');
           cardBody.classList.add('card-body');
                              
-          cardBody.appendChild(title);
+          cardBody.appendChild(titleEl);
           cardBody.appendChild(tempEl);
           cardBody.appendChild(humidEl);
           cardBody.appendChild(windEl);
           cardEl.appendChild(cardBody);
-          currentDay.appendChild(cardEl);
+          todayEl.appendChild(cardEl);
     
         
         });
