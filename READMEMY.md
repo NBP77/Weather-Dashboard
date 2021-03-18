@@ -13,30 +13,28 @@ A website to find weather reports around the country
 
 -Need to work on adding other aspects that are in the acceptance criteria.
 
+-Need to get the 5 day forecast in 
+
 ## Installation
 
 To check the project, I worked on click on these links: 
 
-GitHub: https://github.com/NBP77/Work-day-planner
+GitHub: https://github.com/NBP77/Weather-Dashboard
 
-GitHub pages: https://nbp77.github.io/Work-day-planner/ 
+GitHub pages: https://nbp77.github.io/Weather-Dashboard/
 
 ## Usage
 
 Examples:
 
--Functional day display 
+-Decent UI
 
--Organized hours on the side
+-History bar that clicks previous searches and brings them up 
 
--Functioning save buttons and text area for notes 
+-Access to almost all Cities in the US 
 
--Easy UI for smooth organizing
+-Gives you current Temp and humidity of city you searched
 
--A great use of Bootstrap elements 
-
--A great use of Moment.JS elements 
 
 ## Credits
-
-I was able to do most of this based of the activites we have done in class but I think the setup of the html hurt me a bit when it came to making local storage consistent. 
+Right at the end I was able to understand how to use the API and get the data and that really puts things togther for me but was unable to get a lot of the acceptance criteria. 

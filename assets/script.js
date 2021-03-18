@@ -52,7 +52,13 @@ window.addEventListener('load', function () {
           var cardBody = document.createElement('div');
           cardBody.classList.add('card-body');
                              
-         
+          cardBody.appendChild(title);
+          cardBody.appendChild(tempEl);
+          cardBody.appendChild(humidEl);
+          cardBody.appendChild(windEl);
+          cardEl.appendChild(cardBody);
+          currentDay.appendChild(cardEl);
+    
         
         });
     }
